@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Links({ github, linkedin }) {
   return (
@@ -9,5 +10,15 @@ function Links({ github, linkedin }) {
     </div>
   );
 }
+
+Links.propTypes = {
+  github: PropTypes.string,
+  linkedin: PropTypes.string,
+};
+
+Links.defaultProps = {
+  github: "",
+  linkedin: "",
+};
 
 export default Links;
